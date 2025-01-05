@@ -1,0 +1,16 @@
+
+#h01 {
+    color: rgba(211, 6, 6, 0.856);
+}
+
+div{
+    background-color: rgb(0, 0, 0);
+}
+#un , #con{
+    color: rgb(255, 12, 12);
+    margin-left: 10px;
+}
+#con{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}

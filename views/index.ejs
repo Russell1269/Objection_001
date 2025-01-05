@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objection Post</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1 id="h01">Objection Posts</h1>
+
+    <%for(post of posts){%>
+    <div class="container">
+      <h3 id="un">@<%= post.username %></h3>
+      <h4 id="con"><%= post.content %></h4>
+      <button>
+        <a href="http://localhost:8080/posts/<%= post.id %>">Details</a></button
+      ><br />
+      <button>
+        <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit Post</a>
+      </button>
+      <form action="http://localhost:8080/posts/<%= post.id %>?_method=DELETE" method="post">
+        <button>Delete Post</button>
+      </form>
+    </div>
+    <%}%>
+    <button>
+      <a href="http://localhost:8080/posts/new">Add Your Objection</a>
+    </button>
+  </body>
+</html>
